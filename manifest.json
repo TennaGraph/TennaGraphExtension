@@ -1,8 +1,8 @@
 {
-  "name": "Tennagraph Watcher",
-  "version": "0.0.1",
+  "name": "Tennagraph Extension",
+  "version": "0.1.1",
   "manifest_version": 2,
-  "description": "",
+  "description": "App for creation/collection of network sentiment for better Ethereum governance",
   "homepage_url": "https://tennagraph.com",
   "icons": {
     "200": "icons/logo.png"
@@ -14,7 +14,7 @@
   },
   "browser_action": {
     "default_icon": "icons/logo.png",
-    "default_title": "browser action demo",
+    "default_title": "Tennagraph Extension",
     "default_popup": "src/browser_action/browser_action.html"
   },
   "permissions": [
