@@ -1,0 +1,45 @@
+{
+  "name": "Tennagraph Watcher",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "This extension was created with the awesome extensionizr.com",
+  "homepage_url": "http://extensionizr.com",
+  "icons": {
+    "200": "icons/logo.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/logo.png",
+    "default_title": "browser action demo",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "notifications",
+    "tabs",
+    "storage"
+
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*","https://*/*"
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ]
+    },
+    {
+      "matches": [
+        "http://*/*","https://*/*"
+      ],
+      "js": [
+        "src/js/jquery.js",
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
