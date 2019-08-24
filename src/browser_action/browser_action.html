@@ -1,24 +1,132 @@
 <!doctype html>
 <style type="text/css">
 	#mainPopup {
-		padding: 10px;
 		height: 200px;
-		width: 400px;
+		width: 500px;
 		font-family: 'Roboto', sans-serif;
 	}
 	h1 {
 		font-size: 2em;
 	}
+
+	.subTitle {
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 20px;
+		/* or 83% */
+		display: flex;
+		align-items: center;
+		color: #000000;
+		margin-top: 50px;
+		margin-left: 30px;
+		margin-right: 30px;
+	}
+
+	.paragraph {
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 16px;
+		/* or 83% */
+		display: flex;
+		align-items: center;
+		color: grey;
+		margin-top: 15px;
+		margin-left: 30px;
+		margin-right: 30px;
+	}
+
+	.tableContainer {
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 16px;
+		/* or 83% */
+		display: flex;
+		align-items: center;
+		color: #000000;
+		margin-top: 10px;
+		margin-left: 27px;
+		margin-right: 27px;
+	}
+
+	td a {
+		color: #FFFFFF;
+		text-decoration: none;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 16px;
+		/* identical to box height */
+		color: #212121;
+	}
+
+	.statusButton {
+		background: #45C299;
+		border-radius: 100px;
+		border: none;
+		color: white;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 10px;
+		padding-right: 10px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		margin: 4px 2px;
+	}
+
+	.eipTitle {
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		/* identical to box height */
+
+		color: #212121;
+	}
+
+	.logoBottom {
+		line-height: 16px;
+		/* or 83% */
+		display: flex;
+		align-items: center;
+		color: #000000;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		margin-left: 27px;
+		margin-right: 27px;
+	}
 </style>
+
+<link rel="stylesheet" href="materialize.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
 <script src="../js/jquery.js"></script>
 <script src="fetch.js"></script>
+<script src="materialize.min.js"></script>
 
-
+<body>
 <div id="mainPopup">
-<h1>Tennegraph Watcher</h1>
-<p>Sverstai menya</p>
-	<table id="eipsTable">
-
+<div class="subTitle">Recently Voted EIPs</div>
+<div class="paragraph">
+	App for creation/collection of network sentiment for better Ethereum governance. Vote for EIPs direcrly from GitHub page
+</div>
+<div class="tableContainer">
+	<table>
+		<tbody id="eipsTable">
+		</tbody>
 	</table>
 </div>
+<div class="logoBottom">
+	<a href='https://tennagraph.com/'>
+		<img src="static/logo_grey.svg" >
+	</a>
+</div>
+</div>
+</body>
