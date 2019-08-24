@@ -70,23 +70,23 @@ $( document ).ready(function() {
 				apiGet(port, "eip/"+eipN+"/?format=json").then(result => {
 					var eip = $.parseJSON(result);
 					$('#readme').prepend("<div id='tennagraphInfo' style='color: #3e00a3; font-weight:bold'></div>");
-					if(eip.voting_details == null){
-						$('#tennagraphInfo').append("This EIP is not proposed for voting yet. <br/>");
-					}else{
+					//if(eip.voting_details == null){
+						//$('#tennagraphInfo').append("This EIP is not proposed for voting yet. <br/>");
+					//}else{
 						//$('#tennagraphInfo').append("Voting is <a href='https://tennagraph.com/eip/"+eipN+"' target='_blank'>here</a><br/>");
-						$('#tennagraphInfo').append("<iframe src='https://tennagraph.com/eip/1057/voting' style='width:100%;height:300px;'  frameBorder='0'></iframe>");
-						apiGet(port, "ethereum/gas-voting/"+eipN+"/?format=json").then(result => {
+						$('#tennagraphInfo').append("<iframe src='https://tennagraph.com/eip/"+eipN+"/voting' style='width:100%;height:300px;'  frameBorder='0'></iframe>");
+						/*apiGet(port, "ethereum/gas-voting/"+eipN+"/?format=json").then(result => {
 							//var voting = $.parseJSON(result);
 							//$('#tennagraphInfo').append("Gas voting current results: yay "+formatGas(voting.yay)+" nay "+formatGas(voting.nay)+" abstain "+formatGas(voting.abstain));
-						});
-					}
+						});*/
+					//}
 				});
 			}
 		}
 	}, 1000);
 
 
-
+	/*
 	if (window.location.href.indexOf("//twitter.com/") > -1) {
 		console.log("in twitter");
 		setInterval(function(){
@@ -110,7 +110,7 @@ $( document ).ready(function() {
 		}, 1000);
 
 	}
-
+	*/
 
 
 });
