@@ -4,7 +4,7 @@ function update(port){
 	      if(msg.status == "success"){
 			console.log(msg.data);
 			$.parseJSON(msg.data).forEach(function(eip) {
-			  $("<tr><td>EIP"+eip.eip_num+" "+eip.eip_status.display+"</td></tr>").appendTo("#eipsTable");
+			  $("<tr><td><a href='https://tennagraph.com/eip/"+eip.eip_num+"/' >EIP"+eip.eip_num+" </a></td><td> "+eip.eip_status.display.toUpperCase()+"</td></tr>").appendTo("#eipsTable");
 			});
 
 	      }
@@ -14,7 +14,10 @@ function update(port){
 
 $( document ).ready(function() {
 
-
+   $('body').on('click', 'a', function(){
+     chrome.tabs.create({url: $(this).attr('href')});
+     return false;
+   });
 	 var port = chrome.extension.connect({
 	      name: "connect"
 	 });
